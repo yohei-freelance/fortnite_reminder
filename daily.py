@@ -5,6 +5,7 @@ from linebot.models import (
 
 import pandas as pd
 import numpy as np
+import os
 from datetime import datetime, timezone, timedelta
 from csv import DictWriter
 import argparse
@@ -13,8 +14,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("function_num")
 args = parser.parse_args()
 
-channel_access_token="RTXY+yXwx/jb9OaEJ65phNJK5OlrBDvCkhk36O9NDkVDpJMN6XFpKlYe0VhSRx0T4IaFgKdltAEmBn+XR2XwWjCX6MUB4Y9rC/nLL348+Qo8FokV8Y2Y8qF8rVmSrhtyj8pDiM1pjwDTY4Cec8EGKwdB04t89/1O/w1cDnyilFU="
-# channel_access_token = getenv("LINEBOT_ACCESS_TOKEN")
+channel_access_token = os.getenv("LINEBOT_ACCESS_TOKEN")
 line_bot_api = LineBotApi(channel_access_token)
 
 userinfo_path = "/home/ec2-user/data/user.csv"

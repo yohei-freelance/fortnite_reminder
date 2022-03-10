@@ -22,10 +22,8 @@ from csv import DictWriter
 app = FastAPI()
 
 # Linebot variables definition
-# channel_access_token = os.environ.get("LINEBOT_ACCESS_TOKEN")
-channel_access_token="RTXY+yXwx/jb9OaEJ65phNJK5OlrBDvCkhk36O9NDkVDpJMN6XFpKlYe0VhSRx0T4IaFgKdltAEmBn+XR2XwWjCX6MUB4Y9rC/nLL348+Qo8FokV8Y2Y8qF8rVmSrhtyj8pDiM1pjwDTY4Cec8EGKwdB04t89/1O/w1cDnyilFU="
-# channel_secret = os.environ.get("LINEBOT_SECRET")
-channel_secret="3a1bb096ebf453e5cbc0337ce8c67d84"
+channel_access_token = os.environ.get("LINEBOT_ACCESS_TOKEN")
+channel_secret = os.environ.get("LINEBOT_SECRET")
 line_bot_api_aio = AioLineBotApi(channel_access_token)
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
